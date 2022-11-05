@@ -31,4 +31,4 @@ for k, v in diz.items():
 
 print('\nfor su', diz, 'senza usare items():')
 for k in diz:
-    print(f"k = {k}, diz[{k}] = '{diz[k]}'")
+    print(f"k = {k}, diz[k] = '{diz[k]}'")
