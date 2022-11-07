@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Francesco Canonico",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -110.71, "left": 111.69, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -86.05,
+      "left": -189.65,
+      "attrs": { "color": "orange" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 3.95,
+      "left": -138.99,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "pot1:GND", "pico:GND.8", "black", [ "v0" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "pot1:SIG", "pico:GP28", "magenta", [ "v0" ] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "pico:GP0", "green", [ "v0" ] ],
+    [ "led1:C", "pico:GND.4", "black", [ "v0" ] ]
+  ]
+}

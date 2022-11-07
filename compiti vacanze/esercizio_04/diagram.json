@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Francesco Canonico",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -50.38,
+      "left": -148.98,
+      "attrs": { "color": "black" }
+    }
+  ],
+  "connections": [
+    [ "btn1:1.r", "pico:GP0", "red", [ "v0.07", "h47", "v54.16" ] ],
+    [ "btn1:2.l", "pico:GND.1", "black", [ "h-20", "v11.74" ] ]
+  ]
+}

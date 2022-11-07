@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Francesco Canonico",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -100.52,
+      "left": 116.34,
+      "attrs": { "env": "micropython-20220618-v1.19.1" }
+    },
+    { "type": "wokwi-ir-remote", "id": "remote1", "top": -160, "left": -150, "attrs": {} },
+    { "type": "wokwi-ir-receiver", "id": "ir1", "top": -237.68, "left": 43.21, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 64.75, "left": 239.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "ir1:DAT", "pico:GP0", "green", [ "v0" ] ],
+    [ "ir1:VCC", "pico:3V3", "red", [ "v37.16", "h132.81", "v63.5" ] ],
+    [ "ir1:GND", "pico:GND.1", "black", [ "v0" ] ],
+    [ "servo1:GND", "pico:GND.5", "black", [ "h-30.93", "v-39.22" ] ],
+    [ "servo1:V+", "pico:3V3", "green", [ "h-16.54", "v-173.52" ] ],
+    [ "servo1:PWM", "pico:GP1", "gray", [ "h-194.47", "v-21.94" ] ]
+  ]
+}

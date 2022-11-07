@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "author": "Francesco Canonico",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    { "type": "wokwi-7segment", "id": "sevseg1", "top": 62.56, "left": -179.45, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -40.19,
+      "left": 10,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -3.5,
+      "left": -100,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -83.43,
+      "left": 10,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 41.36,
+      "left": -100,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 143.31,
+      "left": -100,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": 220.78,
+      "left": 10,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": 266.46,
+      "left": 10,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -67.93, "left": 190.01, "attrs": {} }
+  ],
+  "connections": [
+    [ "sevseg1:COM.2", "pico:GND.1", "black", [ "h0.53", "v-49.98" ] ],
+    [ "sevseg1:COM.1", "pico:GND.4", "black", [ "h0.53", "v67.63" ] ],
+    [ "sevseg1:B", "r4:1", "violet", [ "v0" ] ],
+    [ "sevseg1:A", "r2:1", "blue", [ "v0" ] ],
+    [ "sevseg1:F", "r1:1", "gray", [ "v0" ] ],
+    [ "sevseg1:G", "r3:1", "orange", [ "v0" ] ],
+    [ "sevseg1:C", "r5:1", "yellow", [ "v0" ] ],
+    [ "sevseg1:D", "r6:1", "cyan", [ "v0" ] ],
+    [ "sevseg1:E", "r7:1", "purple", [ "v0" ] ],
+    [ "r6:2", "pico:GP16", "cyan", [ "v0.26", "h46.58", "v-34.25" ] ],
+    [ "r7:2", "pico:GP17", "purple", [ "v-0.56", "h74.31", "v-88.9" ] ],
+    [ "r2:2", "pico:GP0", "blue", [ "v0.25", "h16.3", "v6.52" ] ],
+    [ "r4:2", "pico:GP4", "violet", [ "v0.25", "h18.75", "v6.52" ] ],
+    [ "r5:2", "pico:GP11", "yellow", [ "v0.25", "h24.45", "v-4.08" ] ],
+    [ "r3:2", "pico:GP18", "orange", [ "v0.26", "h74.31", "v271.59" ] ],
+    [ "r1:2", "pico:GP19", "gray", [ "v-0.57", "h47.4", "v242.23" ] ],
+    [ "pot1:SIG", "pico:GP28", "green", [ "v0" ] ],
+    [ "pot1:GND", "pico:GND.8", "black", [ "v0" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "v0" ] ]
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Francesco Canonico",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -58.38,
+      "left": -124.31,
+      "attrs": { "color": "orange" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 2.95,
+      "left": -92.98,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "pico:GP0", "green", [ "v0" ] ],
+    [ "led1:C", "pico:GND.1", "black", [ "v0" ] ]
+  ]
+}
