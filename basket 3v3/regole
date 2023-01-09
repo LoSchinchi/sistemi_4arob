@@ -1,0 +1,21 @@
+giocatore a destra:
+    freccia su -> muovi su
+    freccia giu -> muovi giu
+    spazio -> salto
+    freccia destra -> muovi a destra
+    freccia sinistra -> muovi a sinistra
+    p -> tiro
+    o -> passaggio
+    l -> cambio giocatore
+
+giocatore a sinistra:
+    w -> muovi su
+    s -> muovi giu
+    e -> salto
+    d -> muovi a destra
+    a -> muovi a sinistra
+    x -> tiro
+    c -> passaggio
+    r -> cambio giocatore
+
+suoni: https://voicebot.su/it/category/basket/
